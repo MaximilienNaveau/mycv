@@ -1,0 +1,262 @@
+% This file was created with JabRef 2.9.2.
+% Encoding: ISO8859_1
+
+@STRING{huma = "Int. Conf. on Humanoid Robotics (Humanoids)"}
+
+@STRING{icra = "ICRA"}
+
+@STRING{ichr = "Int. Conf. on Humanoid Robotics (ICHR)"}
+
+@STRING{iros = "IROS"}
+
+@STRING{ijrr = "Int. Jour. of Robotics Research"}
+
+@incollection{Chestnutt:2010:MPHR,
+year={2010},
+booktitle={Motion Planning for Humanoid Robots},
+editor={Harada, Kensuke and Yoshida, Eiichi and Yokoi, Kazuhito},
+title={Navigation and Gait Planning},
+publisher={Springer London},
+author={Chestnutt, Joel},
+pages={1-28},
+}
+
+@inproceedings{Hornung:ICHR:12,
+  author    = {Armin Hornung and
+               Andrew Dornbush and
+               Maxim Likhachev and
+               Maren Bennewitz},
+  title     = {Anytime search-based footstep planning with suboptimality bounds},
+  booktitle = ichr,
+  pages     = {674--679},
+  year      = {2012},
+}
+
+@ARTICLE{perrin:itro:12,
+  author = {N. Perrin and O. Stasse and L. Baudouin and F. Lamiraux and E. Yoshida},
+  title = {Fast humanoid robot collision-free footstep planning using swept
+	volume approximations},
+  journal = {IEEE Transactions on Robotics},
+  year = {2012},
+  volume = {28},
+  pages = {427--439},
+  number = {2}
+}
+
+@InProceedings{Deits:ichr:14,
+  author =       {R. Deits and R. Tedrake},
+  title =        {Footstep Planning on Uneven Terrain with Mixed-Integer Convex Optimization},
+  booktitle = ichr,
+  year =      {2014},
+}
+
+@INPROCEEDINGS {Koenemann2015,
+    AUTHOR = { Koenemann, Jonas and Del Prete, Andrea and Tassa, Yuval and Todorov, Emanuel and Stasse, Olivier and Bennewitz, Maren and Mansard, Nicolas },
+    BOOKTITLE = iros,
+    TITLE = { {Whole-body Model-Predictive Control applied to the HRP-2 Humanoid} },
+    YEAR = { 2015 },
+}
+
+@INPROCEEDINGS{herdt:iros:10,
+  author = {A. Herdt and N. Perrin and P.-B. Wieber},
+  title = {Walking without thinking about it},
+  booktitle = {IEEE International Conference on Robot Systems (IROS)},
+  year = {2010},
+  pages = {190--195}
+}
+
+@INPROCEEDINGS{Morisawa:ICRA:2007,
+  author = {M. Morisawa and K. Harada and S. Kajita and S. Nakaoka and K. Fujiwara
+	and F. Kanehiro and K. Kaneko and H. Hirukawa},
+  title = {Experimentation of Humanoid Walking Allowing Immediate Modification
+	of Foot Place Based on Analytical Solution},
+  booktitle = icra,
+  year = {2007},
+  pages = {3989--3994},
+}
+
+@inproceedings {Tedrake:ur:15,
+  author = {Russ Tedrake and Scott Kuindersma and Deits, Robin and Kanako Miura},
+	title = {A closed-form solution for real-time ZMP gait generation and feedback stabilization},
+	booktitle = ichr,
+	year = {2015},
+}
+
+@InProceedings{Feng:ichr:2013,
+  author = {S.  Feng and  X.  Xinjilefu and  W.  Huang  and  C.  G.  Atkeson},
+  title =  {3D  walking based   on   online   optimization},
+  booktitle = ichr,
+  year =      {2013},
+}
+
+@Book{Boyd:CO:2004,
+  author =    {S. Boyd and L. Vandenberghe},
+  title =        {Convex Optimization},
+  publisher =    {Cambridge University Press},
+  year =         {2004},
+}
+
+@article{mordatch_discovery_2012,
+  title = {Discovery of complex behaviors through contact-invariant optimization},
+  volume = {31},
+  number = {4},
+  journal = {{ACM} Transactions on Graphics ({TOG})},
+  author = {Mordatch, Igor and Todorov, Emanuel and Popović, Zoran},
+  year = {2012},
+  pages = {43},
+}
+
+@inproceedings{Dai:ICHR:2014,
+  author    = {Hongkai Dai and
+               Andres Valenzuela and
+               Russ Tedrake},
+  title     = {Whole-body motion planning with centroidal dynamics and full kinematics},
+  booktitle = ichr,
+  pages     = {295--302},
+  year      = {2014},
+}
+
+@ARTICLE{Orin:AURO:2012,
+  author = {D. E. Orin and A. Goswami and S.-H. Lee},
+  title = {Centroidal dynamics of a humanoid robot},
+  journal = {Autonomous Robot},
+  year = {2012},
+  volume = {35},
+  number = {2}
+}
+
+@InProceedings{Wensing:iros:2014,
+  author = {P. M. Wensing and D. E. Orin},
+  title = {3D-SLIP Steering for High-Speed Humanoid Turns},
+  year = {2014},
+  booktitle = iros,
+}
+
+@INPROCEEDINGS{Kajita2003,
+  author = {S. Kajita and F. Kanehiro and K. Kaneko and K. Fujiwara and K. Harada
+	and K. Yokoi and H. Hirukawa},
+  title = {Biped Walking Pattern Generation by using Preview Control of Zero-Moment Point},
+  booktitle = icra,
+  year = {2003},
+  pages = {1620--1626},
+}
+
+@InBook{Ibanez:ark:14,
+  author =       {Ibanez, A. and Bidaud, P. and Padois, V.},
+  chapter=       {Automatic Optimal Biped Walking as a Mixed-Integer Quadratic Program},
+  title =        {Advance in Robot Kinematics},
+  year =         {2014},
+  pages =        {505--516},
+}
+
+@ARTICLE{Nishiwaki:IJRR:09,
+  author = {K. Nishiwaki and S. Kagami},
+  title = {Online Walking Control System for Humanoids with Short Cycle Pattern
+	Generation},
+  journal = ijrr,
+  year = {2009},
+  volume = {28},
+  pages = {729--742},
+  number = {6}
+}
+
+@INPROCEEDINGS{Wieber:IWFFFR:2002,
+  author = {P.-B. Wieber},
+  title = {On the stability of walking systems},
+  booktitle = {Proc. of the Inter. Workshop on Humanoid and Human Friendly Robotics},
+  year = {2002}
+}
+
+@incollection{bock_numerical_2007,
+	series = {Lecture {Notes} in {Control} and {Information} {Sciences}},
+	title = {Numerical {Methods} for {Efficient} and {Fast} {Nonlinear} {Model} {Predictive} {Control}},
+	volume = {358},
+	booktitle = {Assessment and {Future} {Directions} of {Nonlinear} {Model} {Predictive} {Control}},
+	author = {Bock, Hans Georg and Diehl, Moritz and K{\"u}hl, Peter and Kostina, Ekaterina and Schl{\"o}der, Johannes and Wirsching, Leonard},
+	editor = {Findeisen, Rolf and Allg{\"o}wer, Frank and Biegler, Lorenz},
+	year = {2007},
+	pages = {163--179},
+}
+
+@INPROCEEDINGS{Nishiwaki2007,
+  author = {Nishiwaki, K. and Kagami, S.},
+  title = {Walking control on uneven terrain with short cycle pattern generation},
+  booktitle = ichr,
+  year = {2007},
+  pages = {447--453},
+}
+
+@ARTICLE{Stasse:AR:08,
+  author = {O. Stasse and B. Verrelst and P.-B. Wieber and B. Vanderborght and
+	P. Evrard and A. Kheddar and K. Yokoi},
+  title = {Modular Architecture for Humanoid Walking Pattern Prototyping and
+	Experiments},
+  journal = {Advanced Robotics},
+  year = {2008},
+  volume = {22},
+  pages = {589--611},
+  number = {6}
+}
+
+@ARTICLE{Ferreau2014,
+  author = {H.J. Ferreau and C. Kirches and A. Potschka and H.G. Bock and M. Diehl},
+  title = {{qpOASES}: A parametric active-set algorithm for quadratic programming},
+  journal = {Mathematical Programming Computation},
+  year = {2014},
+}
+
+@Article{garcia:ijrr:2015,
+  author =       {M. Garcia and O. Stasse and J.-B. Hayet and C. Dune and C. Esteves and J.-P. Laumond},
+  title =        {Vision-guided motion primitives for humanoid reactive walking: decoupled vs. coupled approaches},
+  journal =      ijrr,
+  year =         {2015},  
+  volume    = {34},
+  number    = {4-5},
+  pages     = {402--419},
+}
+
+@book{diehl_real-time_2002,
+	series = {Fortschritt-{Berichte} {VDI} {Reihe} 8, {Me{\ss}}-, {Steuerungs}-
+und {Regelungstechnik}},
+	title = {Real-{Time} {Optimization} for {Large} {Scale} {Nonlinear} {Processes}},
+	volume = {920},
+	author = {Diehl, M.},
+	year = {2002},
+}
+
+@inproceedings{ Wittmann2015a,
+	author = "Wittmann, Robert and Hildebrandt, Arne-christoph and Wahrmann, Daniel and Rixen, Daniel and Buschmann, Thomas",
+	title = "Real-Time Nonlinear Model Predictive Footstep Optimization for Biped Robots",
+	pages = "711--717",
+	booktitle = ichr,
+	year = "2015",
+}
+
+@inproceedings{ kudruss:ichr:2015,
+  author = "M. Kudruss and M. Naveau and O. Stasse and N. Mansard and C. Kirches and P. Soueres and K. Mombaur",
+  title = "Optimal Control for Multi-Contact, Whole-Body Motion Generation using Center-of-Mass Dynamics for Multi-Contact Situations",
+  booktitle=ichr,
+  year="2015"
+}
+
+@INBOOK{Harada:MPHR:2010,
+  chapter = {Motion Planning for a Humanoid Robot Based on a Biped Walking Pattern Generator},
+  pages = {181--204},
+  title = {Motion Planning for Humanoid Robots},
+  year = {2010},
+  author = {Kensuke Harada}
+}
+
+@InProceedings{Faraji:ICRA:2014,
+  author = {S. Faraji, S. Pouya, C. G. Atkeson and A. J. Ijspeert},
+  title = {Versatile and robust 3D walking with a simulated humanoid robot (Atlas): A model predictive control approach.},
+  booktitle = icra,
+  year = {2014},
+}
+
+@inproceedings{Sherikov:ichr:2014,
+  author = {Sherikov, A. and Dimitrov, D. and Wieber, P.-B.},
+  booktitle = ichr,
+  title = {Whole body motion controller with long-term balance constraints},
+  year = {2014},
+}

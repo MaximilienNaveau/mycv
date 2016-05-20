@@ -1,0 +1,133 @@
+% Exemple de CV utilisant la classe moderncv
+% Style classic en bleu
+% Article complet : http://blog.madrzejewski.com/creer-cv-elegant-latex-moderncv/
+
+% mail a robert.martinez@progress-rh.com
+% mettre numero de telephone
+
+\documentclass[11pt,a4paper]{moderncv}
+\moderncvtheme[blue]{classic}
+                
+\usepackage[utf8]{inputenc}
+%\usepackage{geometry}
+\usepackage[top=1.1cm, bottom=1.1cm, left=2cm, right=2cm]{geometry}
+\usepackage[french]{babel}
+
+%\usepackage{bibentry}
+%\bibliographystyle{ieeetr}
+\usepackage[style=ieee]{biblatex}
+\bibliography{cv}
+
+% Largeur de la colonne pour les dates
+\setlength{\hintscolumnwidth}{2.5cm}
+
+\firstname{Maximilien}
+\familyname{Naveau}
+\title{Doctorant en robotique humano\"ide}              
+\address{6 rue Ren\'e Duguay}{Trouin, 31400 Toulouse}    
+\email{maximilien.\\naveau@gmail.com}
+%\homepage{www.google.com}
+\mobile{06 48 36 37 42} 
+\extrainfo{25 ans -- Permis B}
+\photo[70pt]{../figures/DSC00009.jpeg}
+
+\renewcommand*{\firstnamefont}{\fontsize{30pt}{20}\mdseries\upshape}
+\renewcommand*{\familynamefont}{\fontsize{30pt}{20}\mdseries\upshape}
+\newcommand{\todo}[1]{\textcolor{red}{#1}}
+
+\begin{document}
+\maketitle
+
+
+\section{Formations}
+\cventry{2013 -- 2016}{Doctorant en robotique}
+{du LAAS-CNRS, Toulouse (31)}
+{dipl\^ome de l'universit\'e Toulouse III Paul-Sabatier}
+{}
+{Strat\'egies de marche avanc\'ees, et inspir\'ees
+de l'\^etre humain, pour les robots humano\"ides,}
+\cventry{2008 -- 2013}{Double dipl\^ome \'equivalent M2}
+{Dipl\^ome d'\emph{ing\'enieur} (Supm\'eca Toulon) et de \emph{Master en vision et commande} (Universit\'e de Toulon}
+{Campus de Toulon (83)}
+{}
+{Sp\'ecialit\'e : robotique et syst\^eme m\'ecatronique}
+%
+\cventry{2008 -- 2010}{Classe pr\'eparatoire au grandes \'ecoles }{Lyc\'ee Victor-Hugo (14)}{}{}{Sp\'ecialit\'e : Physique Science de l'Ing\'enieur}%
+
+
+\cventry{2005 -- 2008}{Baccalaur\'eat}{ Lyc\'ee Allende (14)}{}{}{S\'erie scientifique, sp\'ecialit\'e math\'ematique, option th\'e\^atre}
+\cventry{Langue}{Anglais}{lu, \'ecrit, parl\'e}{TOEIC 865/990 2012}{}{Publications dans des revues internationales, stage ing\'enieur de 6 mois \`a  Birmingham, Royaume Unis}
+\cventry{}{Autre langue}{notion de chinois, italien}{}{}{}
+\cventry{Informatique}{Logiciels}{CATIA(V5R20), Matlab(Simulink), LabView, cmake, git}
+{}{}{}
+\cventry{}{Language}{C/C++,python,bash}{}{}{}
+
+\section{Exp\'erience professionnelle}
+\cventry{2013-2016}{Doctorant}{LAAS-CNRS}{Toulouse}{France}
+{
+\begin{itemize}%
+\item Titre : Strat\'egies de marche avanc\'ees, et inspir\'ees de l'\^etre humain, pour les robots humano\"ides,
+\item d\'eveloppement d'algorithme de marche sur sol plat et locomotion multi-contact,
+\item recherche en collaboration avec des partenaires \'etrangers,
+\item int\'egration logiciel sur un robot humano\"ide \emph{HRP-2}.
+\newline{}
+\end{itemize}
+}
+%
+%
+\cventry{Mars 2013\\\`a Septembre 2013}{Stagiaire}{CEA Saclay}{Gif-sur-Yvette}{France}
+{
+\begin{itemize}%
+\item D\'eveloppement et am\'elioration du superviseur AVISO,
+\item d\'eveloppement d'un algorithme d'\'evitement d'obstacle par st\'er\'eovision,
+\item int\'egration du syst\`eme AVISO sur le robot ASSIST.
+\newline{}
+\end{itemize}
+}
+%
+%
+\cventry{Octobre 2012\\\`a F\'evrier 2013}{\'El\`eve}{Supmeca Toulon}{}{France}
+{
+\begin{itemize}%
+\item Objectifs : conception, fabrication et instrumentation d'un navire \'a voile autonome,
+\item travail d'\'equipe (19 personnes) de 5 mois,
+\newline{}
+\end{itemize}
+}
+%
+%
+%
+
+\section{Centre d'inter\^et}
+
+\cventry{Musique}{Instruments}{Batterie (10 ans), Basse (1 an)}{}{}{}
+\cventry{}{Cr\'eation de 2 groupes de musiques}{"MARACLAAS" et "Open Doors" }{ concerts dans diverses sc\`enes \`a  Toulon + f\^ete de la musique 2015 \`a  Toulouse}{}{}
+
+
+
+\section{R\'ef\'erences}
+
+All papers can be found at here :
+\url{http://projects.laas.fr/gepetto/index.php/Publications/ByAuthor?author=Maximilien_Naveau}\\
+
+%\bibentry{naveau:hal-01261415}
+\fullcite{naveau:hal-01261415}
+
+%\bibentry{orthey_2015_iros}
+\fullcite{orthey_2015_iros}
+
+%\bibentry{naveau:hal-01122475}
+\fullcite{naveau:hal-01122475}
+
+%\bibentry{stasse:hal-01122476}
+\fullcite{stasse:hal-01122476}
+
+%\bibentry{carpentier:hal-01203507}
+\fullcite{carpentier:hal-01203507}
+
+%\bibentry{orthey:hal-01137918}
+\fullcite{orthey:hal-01137918}
+
+%\nobibliography{cv}
+
+\end{document}
