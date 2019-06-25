@@ -1,0 +1,119 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Long Lined Cover Letter
+% LaTeX Template
+% Version 1.0 (1/6/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Matthew J. Miller
+% http://www.matthewjmiller.net/howtos/customized-cover-letter-scripts/
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+\documentclass[10pt,stdletter,dateno,sigleft]{newlfm} % Extra options: 'sigleft' for a left-aligned signature, 'stdletternofrom' to remove the from address, 'letterpaper' for US letter paper - consult the newlfm class manual for more options
+
+\usepackage{charter} % Use the Charter font for the document text
+
+\newsavebox{\Luiuc}\sbox{\Luiuc}{\parbox[b]{1.75in}{\vspace{0.5in}
+\includegraphics[width=1.2\linewidth]{logo.png}
+}} % Company/institution logo at the top left of the page
+\makeletterhead{Uiuc}{\Lheader{\usebox{\Luiuc}}}
+
+\newlfmP{sigsize=30pt} % Slightly decrease the height of the signature field
+\newlfmP{addrfromphone} % Print a phone number under the sender's address
+\newlfmP{addrfromemail} % Print an email address under the sender's address
+\PhrPhone{Phone} % Customize the "Telephone" text
+\PhrEmail{Email} % Customize the "E-mail" text
+
+%\lthUiuc % Print the company/institution logo
+
+%----------------------------------------------------------------------------------------
+%	YOUR NAME AND CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\namefrom{Maximilien Naveau} % Name
+
+\addrfrom{
+\today\\[12pt] % Date
+6 rue Ren\'e Duguay Trouin\\ % Address
+Toulouse, France 31400
+}
+
+\phonefrom{(+33) 06 48 36 37 42} % Phone number
+
+\emailfrom{maximilien.naveau@gmail.com} % Email address
+
+%----------------------------------------------------------------------------------------
+%	ADDRESSEE AND GREETING/CLOSING
+%----------------------------------------------------------------------------------------
+
+\greetto{Dear Mr. Fallon,} % Greeting text
+\closeline{Sincerely yours,} % Closing text
+
+\nameto{Mr. Maurice Fallon} % Addressee of the letter above the to address
+
+\addrto{
+Robot Perception Group \\ % To address
+Room 1-29, Informatics Forum, \\
+10 Crichton Street,\\
+Edinburgh EH8 9AB, UK
+}
+
+%----------------------------------------------------------------------------------------
+
+
+%----------------------------------------------------------------------------------------
+%	HEADER FOR USING BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+\usepackage[style=ieee-alphabetic,firstinits=true]{biblatex}
+\bibliography{cv}
+\usepackage{hyperref}
+
+%----------------------------------------------------------------------------------------
+
+
+
+
+
+\begin{document}
+\begin{newlfm}
+
+%----------------------------------------------------------------------------------------
+%	LETTER CONTENT
+%----------------------------------------------------------------------------------------
+
+I am currently a french PhD student in LAAS-CNRS working on advanced walking strategies for humanoid robots.
+My defense will take place the 28$^{th}$ of September and I am looking for a Post-Doc position for about two years.
+I think a fellowship scheme such as the Newton International Fellowships fits my profile.
+I am willing to apply to your group as a french Post-Doc in Humanoid Walking Control.
+
+It would be a fantastic experience to work with you on generalized locomotion for humanoid robots.
+A core topic of my PhD thesis was to use linear and nonlinear optimization methods for generating walking motion trajectories.
+In addition to that I was in charge of deploying those algorithms on the HRP-2 humanoid robot.
+In the framework of the European Project KoroiBot I had fruitful collaborations with the University of Heidelberg.
+We worked on the python and C++ implementation of a real time walking pattern generator able to handle nonlinear constraints.
+It optimizes simultaneously the position and orientation of the foot and an extension of it would be to use mixed integer solvers as in \textbf{[1]}.
+We also worked on generalized locomotion with multiple non coplanar contacts.
+With specialists in human motion from the Weizmann Institute of Science and the University of Tuebingen we used properties extracted from human motions to generate robust and versatile locomotion.
+Furthermore I really would love to work on the Valkyrie humanoid robot.
+
+I am available at your convenience for any further information.
+
+My under review manuscript : \url{https://cloud.laas.fr/index.php/s/ioSMVXlONWJg3v2}\\
+My personal web page : \url{http://projects.laas.fr/gepetto/index.php/Members/MaximilienNaveau}\\
+\textbf{[1]} \fullcite{deits:ichr:14}\\
+
+%----------------------------------------------------------------------------------------
+
+\end{newlfm}
+
+\end{document}

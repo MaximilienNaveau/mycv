@@ -140,7 +140,7 @@
 % optional photo
   \ifthenelse{\isundefined{\@photo}}%
     {}%
-    {\hspace*{12.5cm}\color{firstnamecolor}\framebox{\includegraphics[width=\maketitlepicturewidth]{\@photo}}}\\[-10mm]
+    {\hspace*{11cm}\color{firstnamecolor}\framebox{\includegraphics[width=\maketitlepicturewidth]{\@photo}}}\\[-20mm]
   % optional data
   \begin{minipage}[t]{\textwidth}%
     \raggedright\addressfont\color{addresscolor}%
@@ -148,10 +148,10 @@
       %\maketitledetailsnewline%
       \addresssymbol~\@addressstreet%
       \ifthenelse{\isundefined{\@addresscity}}{}{\@addresscity\\}}%
-    \ifthenelse{\isundefined{\hspace{5mm}\@mobile}}{}{\mobilesymbol~\@mobile ; }%
+    \ifthenelse{\isundefined{\hspace{5mm}\@mobile}}{}{\mobilesymbol~\@mobile ;\\ }%
 %    \ifthenelse{\isundefined{\hspace{2mm}\@phone}}{}{\phonesymbol~\@phone}%
 %    \ifthenelse{\isundefined{\hspace{2mm}\@fax}}{}{\faxsymbol~\@fax}%
-    \ifthenelse{\isundefined{\hspace{5mm}\@email}}{}{\emailsymbol~\emaillink{\@email} ; }%
+    \ifthenelse{\isundefined{\hspace{5mm}\@email}}{}{\emailsymbol~\emaillink{\@email} ;\\ }%
     \ifthenelse{\isundefined{\hspace{5mm}\@extrainfo}}{}{\@extrainfo}%
   \end{minipage}%
   % optional quote
