@@ -15,11 +15,11 @@
 
 %\usepackage{bibentry}
 %\bibliographystyle{ieeetr}
-\usepackage[style=ieee-alphabetic,firstinits=true]{biblatex}
+\usepackage[style=ieee-alphabetic,giveninits=true]{biblatex}
 \bibliography{cv}
 
 \DefineBibliographyExtras{french}{\restorecommand\mkbibnamelast}
-\newcommand*{\mkbibnamelast}[1]{#1}
+\renewcommand*{\mkbibnamelast}[1]{#1}
 
 % Largeur de la colonne pour les dates
 \setlength{\hintscolumnwidth}{2.5cm}
@@ -34,8 +34,8 @@
 \extrainfo{25 ans -- Permis B}
 \photo[5cm]{../figures/DSC00009.jpeg}
 
-\renewcommand*{\firstnamefont}{\fontsize{30pt}{20}\mdseries\upshape}
-\renewcommand*{\familynamefont}{\fontsize{30pt}{20}\mdseries\upshape}
+\newcommand*{\firstnamefont}{\fontsize{30pt}{20}\mdseries\upshape}
+\newcommand*{\familynamefont}{\fontsize{30pt}{20}\mdseries\upshape}
 \newcommand{\items}{\item \hspace{2mm}}
 \newcommand{\todo}[1]{\textcolor{red}{#1}}
 
@@ -122,32 +122,47 @@ Tout les papiers peuvent \^etre t\'el\'echarg\'es \`a cette adresse :
 \url{http://projects.laas.fr/gepetto/index.php/Publications/ByAuthor?author=Maximilien_Naveau}\\
 
 
-\subsection{Revues Scientifiques}
+\section{Publications}
+
+\large{\underline{PhD thesis :}}
 
 \begin{itemize}%
-\items \fullcite{naveau_ral_2016}
+\items \fullcite{phd:mnaveau:2016}
+\end{itemize}
+
+\large{\underline{Journal papers :}}
+
+\begin{itemize}%
+\items \fullcite{mukovskiy:tro:2016}
+\items \fullcite{orthey:homotopic:2015}
+\items \fullcite{naveau:ral:2016}
 \end{itemize}%
 
-\vspace*{0.3cm}
-\subsection{Articles de Conf\'erences}
+%vspace*{0.3cm}
+
+\large{\underline{Conference papers :}}
 
 \begin{itemize}%
-\items \fullcite{matan_biorob_2016}
-\items \fullcite{carpentier_icra_2016}
-\items \fullcite{kudruss_ichr_2015}
-\items \fullcite{naveau_ichr_2014}
-\items \fullcite{stasse_ichr_2014}
+\items \fullcite{ramirez:ichr:2016}
+\items \fullcite{matan:biorob:2016}
+\items \fullcite{carpentier:icra:2016}
+\items \fullcite{kudruss:ichr:2015}
+\items \fullcite{naveau:ichr:2014}
+\items \fullcite{stasse:ichr:2014}
 \end{itemize}
 
-\vspace*{0.3cm}
-\subsection{Articles en Cours de Soumission}
+%vspace*{0.3cm}
+%\subsection{In submission}
 
+\large{\underline{Reviewer in :}}
 \begin{itemize}%
-\items journals :
-  \fullcite{mukovskiy_tro_2016}
-\item conference papers :
-  \fullcite{ramirez:ichr:2016}
+\items IJRR, IEEE T-RO, IEEE RA-L, ICRA, IROS, Humanoids.
 \end{itemize}
+
+\vspace*{1cm}
+
+Tout les papier publi\'e sont disponible ici:
+\url{http://projects.laas.fr/gepetto/index.php/Publications/ByAuthor?author=Maximilien_Naveau}\\
 
 \section{T\^aches Administratives}
 

@@ -1,0 +1,229 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+%\setlength{\hintscolumnwidth}{2.7cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+\usepackage[style=ieee-alphabetic, backend=bibtex, giveninits=true]{biblatex}
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{cv}                                   % 'publications' is the name of a BibTeX file
+
+\name{Maximilien}{Naveau}
+\title{Post-Doc en robotique humano\"ide}           % optional, remove / comment the line if not wanted
+\address{Friedrichstrasse 16}{T\"ubingen}{Allemagne} % optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\phone[mobile]{+33~(6)~48~36~37~42}                  % optional, remove / comment the line if not wanted
+% \phone[fixed]{+2~(345)~678~901}                    % optional, remove / comment the line if not wanted
+% \phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
+\email{maximilien.naveau@gmail.com}                  % optional, remove / comment the line if not wanted
+% \homepage{www.johndoe.com}                         % optional, remove / comment the line if not wanted
+\extrainfo{28 ans -- Permis B}                       % optional, remove / comment the line if not wanted
+\photo[5cm]{../figures/DSC00009.jpeg}                % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+% \quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+\newcommand{\items}{\item \hspace{2mm}}
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+
+\makecvtitle
+\vspace*{-1.2cm}
+
+\section{Formations}
+\cventry{2013 -- 2016}{Doctorat en robotique}
+{LAAS-CNRS, \`a Toulouse (31)}
+{Universit\'e Paul-Sabatier, Toulouse III}
+{encadr\'e par Olivier Stasse.}
+{"Strat\'egies de marche avanc\'ees, et inspir\'ees
+de l'\^etre humain, pour les robots humano\"ides".}
+\cventry{2013}{Master en vision et commande}{Universit\'e de Toulon (83)}{}{}{}
+\cventry{2010 -- 2013}{Dipl\^ome d'ing\'enieur}
+{Supm\'eca Toulon(83)}{}{}
+{Sp\'ecialit\'e : robotique et syst\^eme m\'ecatronique}
+%
+\cventry{2008 -- 2010}{Classe pr\'eparatoire au grandes \'ecoles}{Lyc\'ee Victor Hugo}{\`a Caen (14)}{}{Sp\'ecialit\'e : Physique Science de l'Ing\'enieur}%
+%
+\cventry{2008}{Baccalaur\'eat S}{Lyc\'ee Allende}{\`a H\'erouville (14)}{}{Sp\'ecialit\'e : SVT et Math\'ematique}%
+%
+\cventry{Langue}{Anglais}{lu, \'ecrit, parl\'e}{TOEIC 865/990 2012}{}{
+  Publications dans des revues internationales,
+  stage ing\'enieur de 6 mois \`a  Birmingham, Royaume Unis}
+\cventry{}{Autres langues}{notion de chinois, italien, allemand}{}{}{}
+%
+\cventry{Informatique}{Logiciels}{cmake, git, eigen, numpy,
+                                  LAAS-CNRS/Gepetto Team Framework}
+{}{}{}
+%
+\cventry{}{Language}{C/C++, python, bash}{}{}{}
+
+\section{Exp\'erience professionnelle}
+\cventry{2016-2020}{Post-Doc}{MPI-IS}{T\"ubingen}{Allemagne}
+{
+  \begin{itemize}%
+    \items d\'eveloppement d'algorithmes de locomotion pour robot humano\"ides
+    et quadruped,
+    \items mise en place d'une integration continue des codes qui sont au coeur
+    de l'architecure de control du laboratoire.
+    \items mise en open source de ces m\^eme codes
+    (https://github.com/machines-in-motion/).
+    \items implementation d'une architecture de control bas\'ee sur le 
+    dynamic-graph (structure de control d\'evelopp\'e au LAAS-CNRS).
+    \items int\'egration logiciels sur le robot humano\"ide \emph{Athena} et
+    sur le robot quadrup\`ede \emph{Solo}.
+  \end{itemize}
+}
+\cventry{2013-2016}{Doctorant}{LAAS-CNRS}{Toulouse}{France}
+{
+  \begin{itemize}%
+    \items d\'eveloppement d'algorithmes de locomotion pour robot humano\"ides,
+    \items recherche en collaboration avec des partenaires \'etrangers sur des
+    th\'ematiques interdisciplinaires autour du mouvement des syst\`emes
+    anthropomorphes et du mouvement humain, dans le cadre du projet europ\'een
+    Koroibot.
+    \items int\'egration logiciels sur le robot humano\"ide \emph{HRP-2}.
+  \end{itemize}
+}
+%
+%
+\cventry{Mars 2013\\\`a Septembre 2013}{Stagiaire}{CEA Saclay}{Gif-sur-Yvette}{France}
+{
+  \begin{itemize}%
+    \items d\'eveloppement d'un algorithme d'\'evitement d'obstacles par st\'er\'eovision,
+    \items int\'egration du syst\`eme AVISO sur le robot ASSIST.
+  \end{itemize}
+}
+%
+%
+\cventry{Octobre 2012\\\`a F\'evrier 2013}{\'El\`eve}{Supmeca Toulon}{}{France}
+{
+  \begin{itemize}%
+    \items Conception, fabrication et instrumentation d'un navire \`a voile autonome,
+    \items travail d'\'equipe (19 personnes) de 5 mois,
+  \end{itemize}
+}
+%
+%
+%
+\cventry{Septembre 2012\\\`a Janvier 2013}{Stagiaire}{Universit\'e de Birmingham}{}{Royaume-Uni}
+{
+  \begin{itemize}%
+    \items D\'eveloppement d'un algorithme de compliance active d'un bras manipulateur Kuka,
+    \items travail en autonomie de 5 mois, dans le cadre du projet GeRT (Generalizing Robot Manipulation Tasks)
+  \end{itemize}
+}
+
+\section{Publications Scientifiques}
+
+Tout les papiers peuvent \^etre t\'el\'echarg\'es \`a cette adresse :
+\url{http://projects.laas.fr/gepetto/index.php/Publications/ByAuthor?author=Maximilien_Naveau}\\
+
+\large{\underline{PhD thesis :}}
+
+\begin{itemize}%
+\items \fullcite{phd:mnaveau:2016}
+\end{itemize}
+
+\large{\underline{Journal papers :}}
+
+\begin{itemize}%
+\items \fullcite{mukovskiy:tro:2016}
+\items \fullcite{orthey:homotopic:2015}
+\items \fullcite{naveau:ral:2016}
+\end{itemize}%
+
+%vspace*{0.3cm}
+
+\large{\underline{Conference papers :}}
+
+\begin{itemize}%
+\items \fullcite{ramirez:ichr:2016}
+\items \fullcite{matan:biorob:2016}
+\items \fullcite{carpentier:icra:2016}
+\items \fullcite{kudruss:ichr:2015}
+\items \fullcite{naveau:ichr:2014}
+\items \fullcite{stasse:ichr:2014}
+\end{itemize}
+
+%vspace*{0.3cm}
+%\subsection{In submission}
+
+\large{\underline{Reviewer in :}}
+\begin{itemize}%
+\items IJRR, IEEE T-RO, IEEE RA-L, ICRA, IROS, Humanoids.
+\end{itemize}
+
+\section{T\^aches Administratives}
+
+\cventry{Mai 2015}{Doctorant}{\'Ecole Doctoral EDSYS}{}{France}
+{
+\begin{itemize}
+\items Organisation du congr\`es de l'\'ecole doctorale EDSYS.
+\items Gestion de la logistique pour les deux jours du congr\`es.
+\end{itemize}
+}
+
+
+% \section{Centres d'inter\^et}
+
+% \cventry{Musique}{Instruments}{Batterie (10 ans), Basse (1 an)}{}{}{}
+% \cventry{}{Cr\'eation de 2 groupes de musiques}{"MARACLAAS" et "Open Doors" }{ concerts dans diverses sc\`enes \`a  Toulon + f\^ete de la musique 2015 \`a  Toulouse}{}{}
+
+% \clearpage
+% %-----       letter       ---------------------------------------------------------
+% % recipient data
+% \recipient{Company Recruitment team}{Company, Inc.\\123 somestreet\\some city}
+% \date{January 01, 1984}
+% \opening{Dear Sir or Madam,}
+% \closing{Yours faithfully,}
+% \enclosure[Attached]{curriculum vit\ae{}}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
+% \makelettertitle
+
+% Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ullamcorper neque sit amet lectus facilisis sed luctus nisl iaculis. Vivamus at neque arcu, sed tempor quam. Curabitur pharetra tincidunt tincidunt. Morbi volutpat feugiat mauris, quis tempor neque vehicula volutpat. Duis tristique justo vel massa fermentum accumsan. Mauris ante elit, feugiat vestibulum tempor eget, eleifend ac ipsum. Donec scelerisque lobortis ipsum eu vestibulum. Pellentesque vel massa at felis accumsan rhoncus.
+
+% Suspendisse commodo, massa eu congue tincidunt, elit mauris pellentesque orci, cursus tempor odio nisl euismod augue. Aliquam adipiscing nibh ut odio sodales et pulvinar tortor laoreet. Mauris a accumsan ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse vulputate sem vehicula ipsum varius nec tempus dui dapibus. Phasellus et est urna, ut auctor erat. Sed tincidunt odio id odio aliquam mattis. Donec sapien nulla, feugiat eget adipiscing sit amet, lacinia ut dolor. Phasellus tincidunt, leo a fringilla consectetur, felis diam aliquam urna, vitae aliquet lectus orci nec velit. Vivamus dapibus varius blandit.
+
+% Duis sit amet magna ante, at sodales diam. Aenean consectetur porta risus et sagittis. Ut interdum, enim varius pellentesque tincidunt, magna libero sodales tortor, ut fermentum nunc metus a ante. Vivamus odio leo, tincidunt eu luctus ut, sollicitudin sit amet metus. Nunc sed orci lectus. Ut sodales magna sed velit volutpat sit amet pulvinar diam venenatis.
+
+% Albert Einstein discovered that $e=mc^2$ in 1905.
+
+% \[ e=\lim_{n \to \infty} \left(1+\frac{1}{n}\right)^n \]
+
+% \makeletterclosing
+
+%\clearpage\end{CJK*}                              % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
+\end{document}
+
+
+%% end of file `template.tex'.
