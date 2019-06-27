@@ -1,0 +1,26 @@
+\documentclass{article}
+\usepackage{bibentry}
+\usepackage{etoolbox}
+
+\newtoggle{myrefs}
+\newcommand{\myref}[1]{\iftoggle{myrefs}{\underline{#1}}{#1}}
+
+
+\begin{document}
+
+  \nocite{*}
+  
+  \togglefalse{myrefs}
+  \bibliographystyle{my_plain}
+  \bibliography{cv_abrv.bib}
+
+  \section*{Publications}
+
+  \toggletrue{myrefs}
+  \nobibliography*
+  \begin{itemize}
+    \item \bibentry{naveau:ral:2016}
+    \item \bibentry{naveau:ichr:2014}
+  \end{itemize}
+
+\end{document}
