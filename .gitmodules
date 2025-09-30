@@ -1,3 +1,6 @@
 [submodule "scripts"]
 	path = scripts
 	url = git@github.com:MaximilienNaveau/latex_edition_script.git
+[submodule "src/moderncv"]
+	path = src/moderncv
+	url = https://github.com/moderncv/moderncv.git
