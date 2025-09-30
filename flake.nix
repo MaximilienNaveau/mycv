@@ -1,7 +1,7 @@
 {
   description = "TeX Live + Biber shell for CV project";
 
-  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
+  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
   outputs = { self, nixpkgs }:
     let
@@ -10,8 +10,9 @@
     in {
       devShells.${system}.default = pkgs.mkShell {
         buildInputs = [
+          pkgs.nixfmt # Nix formatter
           (pkgs.texlive.combine {
-            inherit (pkgs.texlive) 
+            inherit (pkgs.texlive)
               scheme-full
               biber
               latexmk

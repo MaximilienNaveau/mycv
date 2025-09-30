@@ -1,0 +1,217 @@
+% Exemple de CV utilisant la classe moderncv
+% Style classic en bleu
+% Article complet : http://blog.madrzejewski.com/creer-cv-elegant-latex-moderncv/
+
+% mail a robert.martinez@progress-rh.com
+% mettre numero de telephone
+
+\documentclass[11pt,a4paper]{moderncv}
+\moderncvtheme[blue]{classic}                
+                
+\usepackage[utf8]{inputenc}
+%\usepackage{geometry}
+\usepackage[top=1.1cm, bottom=1.1cm, left=2cm, right=2cm]{geometry}
+\usepackage[english]{babel}
+
+%\usepackage{bibentry}
+%\bibliographystyle{ieeetr}
+\usepackage[style=ieee-alphabetic,giveninits=true]{biblatex}
+\addbibresource{cv_abrv_anonymous.bib}
+
+% Modern biblatex way to bold a specific author in bibliography
+\DeclareNameFormat{author}{%
+  \ifboolexpr{ test {\ifcurrentname{author}} and test {\ifnumequal{\value{listcount}}{1}} }%
+    {\ifstrequal{\namepartfamily}{Fa}{\textbf{Fa}, }{\namepartfamily, }}%
+    {\namepartfamily, }%
+  \namepartgiven
+  \ifthenelse{\value{listcount}<\value{liststop}}{\addcomma\space}{}%
+}
+
+\DefineBibliographyExtras{french}{\restorecommand\mkbibnamelast}
+\newcommand*{\mkbibnamelast}[1]{#1}
+
+% Largeur de la colonne pour les dates
+\setlength{\hintscolumnwidth}{2.5cm}
+
+\firstname{Mushu}
+\familyname{Fa}
+\title{PhD student in humanoid robotics}              
+\address{chez Mulan Fa, Chine}{}    
+\email{mushu.fa@mulan.com}
+%\homepage{www.google.com}
+\mobile{00 00 00 00 00}
+\extrainfo{age : 900 -- Driving license -- Chinese citizen}
+\photo[4cm]{../figures/mushu.png}
+
+\renewcommand*{\firstnamefont}{\fontsize{30pt}{20}\mdseries\upshape}
+\renewcommand*{\familynamefont}{\fontsize{30pt}{20}\mdseries\upshape}
+\newcommand{\items}{\item[*] \hspace{2mm}}
+\newcommand{\todo}[1]{\textcolor{red}{#1}}
+
+\begin{document}
+
+%\vspace*{1cm}
+
+\maketitle
+
+\vspace*{1cm}
+
+\section{Work Experience}
+\cventry{2021-2025}{Research Engineer}{PAL-FRANCE}{Toulouse/Caen}{France}
+{
+  \begin{itemize}%
+    \items Remote-working in Caen, France
+    \items Integrator coordinator of the European project \textbf{AGIMUS}.
+    \items Software development for robotic applications.
+  \end{itemize}
+}
+\cventry{2020-2021}{Research Engineer}{LAAS-CNRS}{Toulouse}{France}
+{
+  \begin{itemize}%
+    \items Scientific coordinator of the European project \textbf{Memmo}.
+  \end{itemize}
+}
+\cventry{2016-2020}{Post-Doc}{MPI-IS}{T\"ubingen}{Allemagne}
+{
+  \begin{itemize}%
+    \items impl\'ementation d'une architecture de contr\^ole bas\'ee sur le
+    dynamic-graph (d\'evelopp\'e au LAAS-CNRS). L'architecture comprend
+    les logiciels temps r\'eel (bas niveau) jusqu'\`a l'int\'egration ROS.
+    \items d\'eveloppement d'algorithmes de locomotion pour robots humano\"ides
+    et quadrup\`edes.
+    \items int\'egration des logiciels sur le robot humano\"ide \emph{Athena} et
+    sur le robot quadrup\`ede \emph{Solo}.
+    \items mise en place d'une int\'egration continue, des codes qui sont au
+    coeur de l'architecture de contr\^ole du laboratoire.
+    \items mise en open source de ces m\^eme codes
+    (https://github.com/machines-in-motion/).
+  \end{itemize}
+}
+\cventry{2013-2016}{PhD in Robotics}{LAAS-CNRS}{Toulouse}{France}
+{
+\begin{itemize}%
+\items Research in collaboration with partners on inter-disciplinary topics in the frame of the\\ \textbf{European~project~KoroiBot}.
+\items Use of \textbf{linear} and \textbf{nonlinear optimization} for motion generation of humanoid robots.
+\items Application of \textbf{human inspired} optimization costs and human inspired trajectory generation on human robots.
+\items Integration of \textbf{embedded real time} applications on the \textbf{HRP-2} humanoid robot.
+\items Design and implementation of novel algorithms for \textbf{walking} and \textbf{multicontact locomotion} of humanoid robot
+\items Main developer of jrl-walkgen\\ \url{https://github.com/jrl-umi3218/jrl-walkgen.git} (branch devel)
+\newline{}
+\end{itemize}
+}
+%
+\cventry{Mars 2013\\until September 2013}{Training}{CEA Saclay}{Gif-sur-Yvette}{France}
+{
+\begin{itemize}%
+\items Obstacle avoidance of a robotic arm using stereo-vision,
+\items integration of the AVISO system on the robot ASSIST.
+\newline{}
+\end{itemize}
+}
+%
+%
+\cventry{October 2012\\until February 2013}{Student project}{Supm\'eca Toulon}{}{France}
+{
+\begin{itemize}%
+\items Mechanical design, fabrication and instrumentation of an autonomous sail boat,
+\items team work (19 students) for 5 months,
+\newline{}
+\end{itemize}
+}
+%
+%
+%
+\cventry{September 2012\\until January 2013}{Training}{University of Birmingham}{}{United-Kingdom}
+{
+\begin{itemize}%
+\items Implementation of an admittance control on a 6 degree of freedom Kuka robotic arm,
+\items 5 months of autonomous work, in the frame of the GeRT (Generalizing Robot Manipulation Tasks) project
+\newline{}
+\end{itemize}
+}
+
+\newpage
+
+\section{Education}
+\cventry{2013 -- 2016}{PhD in Robotics}
+{in LAAS-CNRS}
+{Universit\'e Paul-Sabatier, Toulouse III}
+{supervised by Chi-Fu. \textit{"Advanced human inspired walking strategies for humanoid robots".} Defense the 28$^{th}$ of September 2016}
+{}
+\cventry{2010 -- 2013}{2 master degrees}
+{Engineer Diploma (Supm\'eca Toulon) AND \emph{Master in vision and command} (University of Toulon)}
+{France}
+{}
+{Specialty : robotics and mechatronic systems}
+%
+\cventry{2008 -- 2010}{Preparatory classes to enter the French Engineering Schools + Baccalaur\'eat (A-level)}{in Caen, France}{}{}{Specialty : Mathematics, Physics, Engineer science}%
+%
+\cventry{Language}{English}{fluent : read, written, spoken}{TOEIC 865/990 2012}{}{Publications in international journals, training for 6 months in Birmingham UK}
+\cventry{}{Other languages}{notion of Chinese and Italian}{}{}{}
+%
+\cventry{Informatics}{Software}{cmake, git, OpenCV, Matlab(Simulink), LabView, CATIA(V5R20), Adams}
+{}{}{}
+%
+\cventry{}{Language}{C/C++,python,bash}{}{}{}
+
+
+\section{Scientific animation}
+
+\cventry{Mai 2015}{Congress}{Doctoral School EDSYS}{}{France}
+{
+\begin{itemize}
+\items Organization of the annual doctoral school congress.
+\items Management of the logistic of the congress for the 2 days.
+\end{itemize}
+}
+
+
+\section{Publications}
+
+\large{\underline{PhD thesis :}}
+
+\begin{itemize}%
+\items \fullcite{phd:mnaveau:2016}
+\end{itemize}
+
+\large{\underline{Journal papers :}}
+
+\begin{itemize}%
+\items \fullcite{mukovskiy:tro:2016}
+\items \fullcite{orthey:homotopic:2015}
+\items \fullcite{naveau:ral:2016}
+\items \fullcite{clever:ral:2017}
+\end{itemize}%
+
+%vspace*{0.3cm}
+
+\large{\underline{Conference papers :}}
+
+\begin{itemize}%
+\items \fullcite{ramirez:ichr:2016}
+\items \fullcite{matan:biorob:2016}
+\items \fullcite{carpentier:icra:2016}
+\items \fullcite{kudruss:ichr:2015}
+\items \fullcite{naveau:ichr:2014}
+\items \fullcite{stasse:ichr:2014}
+\end{itemize}
+
+%vspace*{0.3cm}
+%\subsection{In submission}
+
+\large{\underline{Reviewer in :}}
+\begin{itemize}%
+\items IJRR, IEEE T-RO, IEEE RA-L, ICRA, IROS, Humanoids.
+\end{itemize}
+
+\vspace*{1cm}
+
+Published papers can all be downloaded from this link :
+\url{http://projects.laas.fr/gepetto/index.php/Publications/ByAuthor?author=mushu_fa}\\
+
+\section{Interests}
+
+\cventry{Music}{Instruments}{Drum (10 years), Bass (1 year)}{}{}{}
+\cventry{}{Creation of 2 bands}{"MARACLAAS" and "Open Doors" }{ concerts in different places in 2012-2013 in Toulon (France) + music festival in June 2015 in Toulouse (France)}{}{}
+
+\end{document}
