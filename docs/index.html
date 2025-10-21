@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My CV Project</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to Maximilien Naveau CV Project</h1>
+        <p>This project generates PDF versions of CVs in both English and French.</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="src/cv_english.pdf">Download English CV</a></li>
+            <li><a href="src/cv_french.pdf">Download French CV</a></li>
+            <li><a href="docs/about.html">About the Project</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h2>Viewers</h2>
+        <div id="pdf-viewer">
+            <h1>Maximilien Naveau - Curriculum Vitae - French</h1>
+            <iframe id="pdf-frame" src="pdfs/cv_french.pdf" width="100%" height="600px"></iframe>
+        </div>
+        <div id="pdf-viewer">
+            <h1>Maximilien Naveau - Curriculum Vitae - English</h1>
+            <iframe id="pdf-frame" src="pdfs/cv_english.pdf" width="100%" height="600px"></iframe>
+        </div>
+    </section>
+    <section>
+        <h2>About</h2>
+        <p>This project utilizes LaTeX for generating professional CVs.
+            It includes a bibliography for references and is set up for
+            continuous integration using GitHub Actions.</p>
+    </section>
+    <footer>
+        <p>&copy; 2023 Maximilien Naveau</p>
+    </footer>
+</body>
+
+</html>
