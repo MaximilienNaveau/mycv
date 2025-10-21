@@ -22,14 +22,16 @@
     <section>
         <h2>Viewers</h2>
         <div id="pdf-viewer">
-            <h1>Maximilien Naveau - Curriculum Vitae - French</h1>
+            <button onclick="showPDF('pdfs/cv_french.pdf')">View French CV</button>
+            <button onclick="showPDF('pdfs/cv_english.pdf')">View English CV</button>
             <iframe id="pdf-frame" src="pdfs/cv_french.pdf" width="100%" height="600px"></iframe>
         </div>
-        <div id="pdf-viewer">
-            <h1>Maximilien Naveau - Curriculum Vitae - English</h1>
-            <iframe id="pdf-frame" src="pdfs/cv_english.pdf" width="100%" height="600px"></iframe>
-        </div>
     </section>
+    <script>
+        function showPDF(pdfPath) {
+            document.getElementById('pdf-frame').src = pdfPath;
+        }
+    </script>
     <section>
         <h2>About</h2>
         <p>This project utilizes LaTeX for generating professional CVs.
