@@ -1,0 +1,204 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+\moderncvtheme[blue]{classic}
+
+\usepackage[utf8]{inputenc}
+\usepackage[top=1.1cm, bottom=1.1cm, left=2cm, right=2cm]{geometry}
+\usepackage[english]{babel}
+\usepackage[style=ieee-alphabetic, giveninits=true, maxnames=4, minnames=4]{biblatex}
+\addbibresource{cv_abrv.bib}
+
+\DeclareNameFormat{author}{%
+  \ifthenelse{\equal{\namepartfamily}{Naveau}}
+    {\textbf{\namepartgivenabbr\addspace\namepartfamily}}
+    {\namepartgivenabbr\addspace\namepartfamily}%
+  \ifthenelse{\value{listcount}<\value{liststop}}
+    {\addcomma\addspace}
+    {}%
+}
+
+\usepackage{etoolbox}
+\newtoggle{myrefs}
+\newcommand{\myref}[1]{\iftoggle{myrefs}{\textbf{#1}}{#1}}
+
+\name{Maximilien}{Naveau}
+\title{Eng\'enieur de recherche en robotique humano\"ide}            % optional, remove / comment the line if not wanted
+% \address{16 rue de la nouvelle Ecosse 14320 Saint Martin de Fontenay}{}
+\address{Toulouse}{}
+% \phone[mobile]{+33~(6)~48~36~37~42}                  % optional, remove / comment the line if not wanted
+% \email{maximilien.naveau@gmail.com}                  % optional, remove / comment the line if not wanted
+\extrainfo{Permis B -- Français}                                   % optional, remove / comment the line if not wanted
+\photo[5cm]{../figures/DSC00009.jpeg}                  % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+
+\renewcommand*{\firstnamefont}{\fontsize{30pt}{20}\mdseries\upshape}
+\renewcommand*{\familynamefont}{\fontsize{30pt}{20}\mdseries\upshape}
+\newcommand{\items}{\item[*] \hspace{2mm}}
+\newcommand{\todo}[1]{\textcolor{red}{#1}}
+
+
+\begin{document}
+
+\maketitle
+
+\section{Exp\'erience professionnelle}
+
+\cventry{2021-2025}{Ingénieur de recherche}{PAL-FRANCE}{Toulouse/Caen}{France}
+{
+  \begin{itemize}%
+    \items Télétravail à Caen, France
+    \items Coordinateur intégrateur du projet européen \textbf{AGIMUS}.
+    \items Développement logiciel pour des applications robotiques.
+  \end{itemize}
+}
+
+\cventry{2020-2021}{Ingénieur de recherche}{LAAS-CNRS}{Toulouse}{France}
+{
+  \begin{itemize}%
+    \items Coordinateur scientifique du projet européen \textbf{Memmo}.
+  \end{itemize}
+}
+
+\cventry{2016-2020}{Post-Doc}{MPI-IS}{T\"ubingen}{Allemagne}
+{
+  \begin{itemize}%
+    \items impl\'ementation d'une architecture de contr\^ole bas\'ee sur le
+    dynamic-graph (d\'evelopp\'e au LAAS-CNRS). L'architecture comprend
+    les logiciels temps r\'eel (bas niveau) jusqu'\`a l'int\'egration ROS.
+    \items d\'eveloppement d'algorithmes de locomotion pour robots humano\"ides
+    et quadrup\`edes.
+    \items int\'egration des logiciels sur le robot humano\"ide \emph{Athena} et
+    sur le robot quadrup\`ede \emph{Solo}.
+    \items mise en place d'une int\'egration continue, des codes qui sont au
+    coeur de l'architecture de contr\^ole du laboratoire.
+    \items mise en open source de ces m\^eme codes
+    (https://github.com/machines-in-motion/).
+  \end{itemize}
+}
+\cventry{2013-2016}{Doctorant}{LAAS-CNRS}{Toulouse}{France} 
+{
+  \begin{itemize}%
+    \items d\'eveloppement d'algorithmes de locomotion pour robots humano\"ides,
+    \items recherche en collaboration avec des partenaires \'etrangers sur des
+    th\'ematiques interdisciplinaires autour du mouvement des syst\`emes
+    anthropomorphes et du mouvement humain, dans le cadre du projet europ\'een
+    Koroibot.
+    \items int\'egration des logiciels sur le robot humano\"ide \emph{HRP-2}.
+  \end{itemize}
+}
+%
+%
+\cventry{Mars 2013\\\`a Septembre 2013}{Stagiaire}{CEA Saclay}{Gif-sur-Yvette}
+{France}
+{
+  \begin{itemize}%
+    \items d\'eveloppement d'un algorithme d'\'evitement d'obstacles par
+    st\'er\'eovision,
+    \items int\'egration du syst\`eme AVISO sur le robot ASSIST.
+  \end{itemize}
+}
+%
+%
+\cventry{Octobre 2012\\\`a F\'evrier 2013}{\'El\`eve}{Supmeca Toulon}{}{France}
+{
+  \begin{itemize}%
+    \items Conception, fabrication et instrumentation d'un navire \`a voile autonome,
+    travail d'\'equipe (19 personnes) de 5 mois,
+  \end{itemize}
+}
+%
+%
+%
+\cventry{Septembre 2012\\\`a Janvier 2013}{Stagiaire}{Universit\'e de Birmingham}{}{Royaume-Uni}
+{
+  \begin{itemize}%
+    \items D\'eveloppement d'un algorithme de compliance active d'un bras manipulateur Kuka,
+    travail en autonomie de 5 mois, dans le cadre du projet GeRT (Generalizing Robot Manipulation Tasks)
+  \end{itemize}
+}
+
+\section{Formations}
+\cventry{2013 -- 2016}{Doctorat en robotique}
+{LAAS-CNRS, \`a Toulouse (31)}
+{Universit\'e Paul-Sabatier, Toulouse III}
+{encadr\'e par Olivier Stasse}
+{"Strat\'egies de marche avanc\'ees, et inspir\'ees
+de l'\^etre humain, pour les robots humano\"ides".}
+\cventry{2013}{Master en vision et commande}{Universit\'e de Toulon (83)}{}{}{}
+\cventry{2010 -- 2013}{Dipl\^ome d'ing\'enieur}
+{Supm\'eca Toulon(83)}{}{}
+{Sp\'ecialit\'e : robotique et syst\`emes m\'ecatroniques}
+%
+\cventry{2008 -- 2010}{Classe pr\'eparatoire aux grandes \'ecoles}{Lyc\'ee Victor Hugo}{\`a Caen (14)}{}{Sp\'ecialit\'e : Physique Sciences de l'Ing\'enieur}%
+%
+\cventry{2008}{Baccalaur\'eat S}{Lyc\'ee Allende}{\`a H\'erouville St-Clair (14)}{}{Sp\'ecialit\'e : SVT et Math\'ematiques}%
+%
+\cventry{Langue}{Anglais}{lu, \'ecrit, parl\'e}{TOEIC 865/990 2012}{}{
+  Publications dans des revues internationales,
+  stage ing\'enieur de 6 mois \`a  Birmingham, Royaume Uni}
+\cventry{}{Autres langues}{notion de chinois, italien, allemand}{}{}{}
+%
+\cventry{Informatique}{Logiciels}{cmake, git, eigen, numpy, ROS, Bamboo,
+                                  LAAS-CNRS/Gepetto Team Framework}
+{}{}{}
+%
+\cventry{}{Langage}{C/C++, python, bash, nix}{}{}{}
+
+\section{Publications Scientifiques}
+
+Tous les articles sont disponibles via l'archive ouverte HAL
+\url{https://hal.archives-ouvertes.fr/}
+
+\large{\underline{Thèse de doctorat :}}
+
+\begin{itemize}%
+\items \verysmall{\fullcite{phd:mnaveau:2016}}
+\end{itemize}
+
+\large{\underline{Article de revues :}}
+
+\begin{itemize}%
+\items \verysmall{\fullcite{mukovskiy:tro:2016}}
+\items \verysmall{\fullcite{orthey:homotopic:2015}}
+\items \verysmall{\fullcite{naveau:ral:2016}}
+\items \verysmall{\fullcite{clever:ral:2017}}
+\end{itemize}%
+
+%vspace*{0.3cm}
+
+\large{\underline{Articles de conférences :}}
+
+\begin{itemize}%
+\items \verysmall{\fullcite{ramirez:ichr:2016}}
+\items \verysmall{\fullcite{matan:biorob:2016}}
+\items \verysmall{\fullcite{carpentier:icra:2016}}
+\items \verysmall{\fullcite{kudruss:ichr:2015}}
+\items \verysmall{\fullcite{naveau:ichr:2014}}
+\items \verysmall{\fullcite{stasse:ichr:2014}}
+\end{itemize}
+
+%vspace*{0.3cm}
+%\subsection{In submission}
+
+\large{\underline{Revues d'articles scientifiques :}}
+\begin{itemize}%
+\items IJRR, IEEE T-RO, IEEE RA-L, ICRA, IROS, Humanoids.
+\end{itemize}
+
+\vspace*{1cm}
+
+Tous les articles publiés peuvent être téléchargés depuis ce lien :
+\url{http://projects.laas.fr/gepetto/index.php/Publications/ByAuthor?author=Maximilien_Naveau}\\
+
+\section{Centres d'intérêt}
+
+\cventry{Musique}{Instruments}{Batterie (10 ans), Basse (1 an)}{}{}{}
+\cventry{}{Création de 2 groupes}{"MARACLAAS" et "Open Doors"}{Concerts dans différents lieux en 2012-2013 à Toulon (France) + festival de musique en juin 2015 à Toulouse (France)}{}{}
+
+\end{document}
